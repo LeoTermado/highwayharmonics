@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum — HighwayHarmonics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#home">Highway<span class="mark">Harmonics</span></a>
+      <ul class="nav-list" aria-label="Sekundärnavigation">
+        <li><a class="nav-link" href="index.html#about-app">About</a></li>
+        <li><a class="nav-link" href="index.html#how-it-works">How it works</a></li>
+        <li><a class="nav-link" href="index.html#about-me">About me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Impressum</h1>
+        <p class="muted small">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
+
+        <p><strong>Dienstanbieter:</strong><br>
+        Leo Termado<br>
+        <em>Dr.-Toll Str. 33</em><br>
+        <em>50226 Frechen, Deutschland</em></p>
+
+        <p><strong>Kontakt:</strong><br>
+        E-Mail: <a href="mailto:leotermado@yahoo.com">leotermado@yahoo.com</a><br>
+        Telefon: <em>015906288910</em></p>
+
+        <p><strong>Umsatzsteuer-ID:</strong> <em>nicht vorhanden...</em><br>
+        <strong>Registereintrag:</strong> <em>nicht vorhanden...</em></p>
+
+        <p class="muted small">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV (falls anwendbar): Leo Termado, Anschrift wie oben.</p>
+
+        <h2 class="headline">Haftungshinweise</h2>
+        <p>Externe Links führen zu Inhalten fremder Anbieter. Für diese Inhalte ist der jeweilige Anbieter verantwortlich.</p>
+
+        <p class="small muted">Stand: <span id="imp-date"></span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>© Leo Termado 2025</p>
+      <p>
+        <a class="footer-legal-link" href="impressum.html" aria-current="page">Impressum</a>
+        <span aria-hidden="true"> · </span>
+        <a class="footer-legal-link" href="datenschutz.html">Datenschutz</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // tiny helper to stamp date
+    document.getElementById('imp-date').textContent = new Date().toLocaleDateString('de-DE');
+  </script>
+</body>
+</html>

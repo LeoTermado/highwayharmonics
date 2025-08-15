@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light only" />
+    <title>HighwayHarmonics — Generative Drive Music</title>
+
+    <!-- Local fonts -->
+    <link rel="preload" href="assets/fonts/OrticaLinear-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/OrticaLinear-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/OrticaLinear-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="top">
+    <!-- Header / Navigation -->
+    <header class="site-header" role="banner" aria-label="Primary">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Go to top">
+          Highway<span class="mark">Harmonics</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Open menu" aria-controls="nav" aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+
+        <ul id="nav" class="nav-list" role="navigation" aria-label="Main Navigation">
+          <li><a class="nav-link" href="#about-app">About</a></li>
+          <li><a class="nav-link" href="#how-it-works">How it works</a></li>
+          <li><a class="nav-link" href="#about-me">About me</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li>
+            <a class="nav-link resume" href="https://instagram.com/leo.tdo" target="_blank" rel="noopener noreferrer">
+              Download (Preview)
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero / Download CTA -->
+      <section id="home" class="section hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>Music that moves while you drive.</h1>
+            <p class="lead">
+              HighwayHarmonics creates dynamically changing music while you drive.
+            </p>
+            <a class="btn-download" href="https://instagram.com/leo.tdo" target="_blank" rel="noopener noreferrer"
+               aria-label="Open preview link on Instagram">
+              <img class="app-icon" src="img/app-icon.png" alt="App icon" width="28" height="28" />
+              <span>Coming soon...</span>
+            </a>
+            <p class="muted small">App Store pending • Work-in-progress preview link</p>
+          </div>
+          <div class="hero-media">
+            <img src="img/hero-mock.png" alt="HighwayHarmonics app mockup" />
+          </div>
+        </div>
+      </section>
+
+      <!-- About HighwayHarmonics (image LEFT, text RIGHT) -->
+      <section id="about-app" class="section about about-app">
+        <div class="container about-wrap about-right">
+          <div class="about-img">
+            <img src="img/about-app.jpg" alt="In-car view with phone running HighwayHarmonics" />
+          </div>
+          <div class="about-text">
+            <h2 class="headline">About <span class="mark">HighwayHarmonics</span></h2>
+            <p>
+              Inspired by projects like Mercedes’ Sound Drive, HighwayHarmonics turns <strong>live car data</strong> into music.
+              A Bluetooth <strong>OBD-II</strong> scanner streams speed and RPM to the phone; the app’s
+              <strong>AudioKit</strong>-based engine maps those signals to musical parameters. Drive faster and
+              layers fade in, filters open, intensity rises; slow down and the mix breathes back into calmer pads.
+            </p>
+            <p class="muted small">
+              Focus right now: a reliable audio graph and smooth behavior first — UI later. Bluetooth classes for the OBD-II
+              connection are in progress; once stable, it’s in-car testing and iteration. (Exploring a simple GPS-only mode, too.)
+            </p>
+            <ul class="quickfacts">
+              <li><strong>Status:</strong> <span>In progress</span></li>
+              <li><strong>Stack:</strong> <span>Swift · Xcode · AudioKit</span></li>
+              <li><strong>Hardware:</strong> <span>Bluetooth OBD-II scanner</span></li>
+              <li><strong>Platform:</strong> <span>iOS</span></li>
+              <li><strong>Key behavior:</strong> <span>Stems fade + filter curves with speed; smooth, click-free transitions</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how-it-works" class="section">
+        <div class="container">
+          <h2 class="headline">How it <span class="accent">works</span></h2>
+          <ol class="steps">
+            <li class="step-card">
+              <h3>Connect</h3>
+              <p class="muted">Pair a Bluetooth OBD-II dongle. The app reads speed & engine RPM securely on-device.</p>
+            </li>
+            <li class="step-card">
+              <h3>Drive</h3>
+              <p class="muted">Values like speed feed envelopes/curves that control stem levels and filters.</p>
+            </li>
+            <li class="step-card">
+              <h3>Listen</h3>
+              <p class="muted">AudioKit processes stems; transitions are smoothed to avoid clicks and jumps.</p>
+            </li>
+          </ol>
+          <p class="note">Exploring: a coarse GPS-only mode for casual testing (no dongle).</p>
+        </div>
+      </section>
+
+      <!-- About Me (image left on desktop) -->
+      <section id="about-me" class="section about about-me">
+        <div class="container about-wrap about-left">
+          <div class="about-img">
+            <img src="img/LeoTermado.png" alt="Portrait of Leo Termado" />
+          </div>
+          <div class="about-text">
+            <h2 class="headline">About <span class="accent">me</span></h2>
+            <p>
+              I’m <a class="accent" href="https://leotermado.github.io/leotermado" target="_blank" rel="noopener">Leo Termado</a>
+, a dual B.Sc. student in Business Informatics who builds minimal, reliable audio software for mobility.
+              My focus is iOS and <strong>AudioKit</strong> — low-latency audio graphs, smooth parameter mappings, and clean, readable UX.
+              The idea for HighwayHarmonics crystallized after trying Mercedes’ “Sound Drive”: generative music that responds to real drives,
+              tuned for calm and flow rather than distraction.
+            </p>
+            <div class="chips">
+              <span class="chip">IOS</span>
+              <span class="chip">AudioKit</span>
+              <span class="chip">Swift</span>
+              <span class="chip">Bluetooth / OBD-II</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer with Contact -->
+    <footer id="contact" class="site-footer" role="contentinfo" aria-label="Footer">
+      <div class="container footer-grid">
+        <section class="footer-col">
+          <h3 class="footer-brand">Highway<span class="mark">Harmonics</span></h3>
+          <p class="footer-text">coming soon...</p>
+
+          <!-- Footer CTA -->
+          
+        </section>
+
+        <nav class="footer-col" aria-label="Explore">
+          <h3 class="footer-title">Explore</h3>
+          <ul class="footer-links">
+            <li><a class="footer-link" href="#about-app">About</a></li>
+            <li><a class="footer-link" href="#how-it-works">How it works</a></li>
+            <li><a class="footer-link" href="#about-me">About me</a></li>
+            <li><a class="footer-link" href="https://instagram.com/leo.tdo" target="_blank" rel="noopener">Preview</a></li>
+          </ul>
+        </nav>
+
+        <section class="footer-col" aria-label="Contact">
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-links">
+            <li><a class="footer-link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a class="footer-link" href="https://instagram.com/leo.tdo" target="_blank" rel="noopener">Instagram</a></li>
+            <li><span class="footer-link footer-textline">leotermado@yahoo.com</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="container footer-bottom">
+  <p>© Leo Termado 2025</p>
+  <p>
+    <a class="footer-legal-link" href="impressum.html">Impressum</a>
+    <span aria-hidden="true"> · </span>
+    <a class="footer-legal-link" href="datenschutz.html">Datenschutz</a>
+  </p>
+</div>
+
+
+      <!-- Legal anchor target -->
+      <div id="legal" class="legal-anchor" aria-hidden="true"></div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
